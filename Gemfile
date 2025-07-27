@@ -27,6 +27,5 @@ end
 
 gem "kicks", "~> 3.2"
 gem "redis", "~> 5.4"
-gem "redis-rails", "~> 0.0.0"
 gem "hiredis", "~> 0.6.3"
 gem "connection_pool", "~> 2.5"
