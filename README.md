@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## API
+To post an alert, use:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+curl -X POST http://localhost:3000/api/alerts \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: alert_appxxxxxxxxxxxxxxxxxxxxxxxx" \
+  -d '{"message": "Test alert from curl"}'
+```
