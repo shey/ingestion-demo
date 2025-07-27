@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+require "sneakers"
+require "sneakers/runner"
+
+Rails.application.eager_load!
+
+Sneakers::Runner.new([AlertWorker]).run
