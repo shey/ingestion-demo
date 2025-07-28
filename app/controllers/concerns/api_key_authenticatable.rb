@@ -10,16 +10,13 @@ module ApiKeyAuthenticatable
 
   def authenticate_api_key
     key = request.headers["X-Api-Key"].to_s
-
     return unauthorized!("missing or malformed") unless key.start_with?("alert_app")
 
-    user_id = Rails.cache.fetch("auth:api_key:#{key}", expires_in: 10.minutes) do
-      User.find_by(api_key: key)&.id
+    @current_user = Rails.cache.fetch("auth:api_key:#{key}", expires_in: 10.minutes) do
+      User.find_by(api_key: key)
     end
 
-    @current_user = User.find_by(id: user_id)
-
-    unauthorized!("invalid") unless @current_user
+    return unauthorized!("invalid") unless @current_user
   end
 
   def unauthorized!(msg)
