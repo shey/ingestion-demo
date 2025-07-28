@@ -4,12 +4,19 @@ module Api
     skip_before_action :verify_authenticity_token
 
     def create
-      RabbitPublisher.publish(
-        queue: 'alerts.ingest',
-        payload: { alert: params[:alert], user_id: @current_user.id }
+      message_id = SecureRandom.uuid7
+
+      KafkaProducer.publish(
+        topic: 'alerts.ingest',
+        payload: {
+          id: message_id,
+          alert: params[:alert],
+          user_id: @current_user.id,
+          received_at: Time.current.utc.iso8601
+        }
       )
 
-      render json: { message: "Authorized as #{@current_user.email}" }
+      render json: { message: "Accepted alert #{@current_user.email}", id: message_id }, status: :accepted
     end
   end
 end
