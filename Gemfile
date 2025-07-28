@@ -27,5 +27,4 @@ end
 
 gem "redis"
 gem "connection_pool"
-gem "karafka"
 

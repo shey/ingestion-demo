@@ -102,14 +102,6 @@ GEM
     drb (2.2.3)
     erb (5.0.2)
     erubi (1.13.1)
-    ffi (1.17.2-aarch64-linux-gnu)
-    ffi (1.17.2-aarch64-linux-musl)
-    ffi (1.17.2-arm-linux-gnu)
-    ffi (1.17.2-arm-linux-musl)
-    ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x86_64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
-    ffi (1.17.2-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
@@ -126,35 +118,6 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    karafka (2.5.0)
-      base64 (~> 0.2)
-      karafka-core (>= 2.5.2, < 2.6.0)
-      karafka-rdkafka (>= 0.19.5)
-      waterdrop (>= 2.8.3, < 3.0.0)
-      zeitwerk (~> 2.3)
-    karafka-core (2.5.2)
-      karafka-rdkafka (>= 0.19.2, < 0.21.0)
-      logger (>= 1.6.0)
-    karafka-rdkafka (0.20.1)
-      ffi (~> 1.15)
-      logger
-      mini_portile2 (~> 2.6)
-      rake (> 12)
-    karafka-rdkafka (0.20.1-arm64-darwin)
-      ffi (~> 1.15)
-      logger
-      mini_portile2 (~> 2.6)
-      rake (> 12)
-    karafka-rdkafka (0.20.1-x86_64-linux-gnu)
-      ffi (~> 1.15)
-      logger
-      mini_portile2 (~> 2.6)
-      rake (> 12)
-    karafka-rdkafka (0.20.1-x86_64-linux-musl)
-      ffi (~> 1.15)
-      logger
-      mini_portile2 (~> 2.6)
-      rake (> 12)
     logger (1.7.0)
     loofah (2.24.1)
       crass (~> 1.0.2)
@@ -180,6 +143,9 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
+    nokogiri (1.18.9)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.9-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.9-aarch64-linux-musl)
@@ -284,10 +250,6 @@ GEM
       concurrent-ruby (~> 1.0)
     uri (1.0.3)
     useragent (0.16.11)
-    waterdrop (2.8.5)
-      karafka-core (>= 2.4.9, < 3.0.0)
-      karafka-rdkafka (>= 0.19.2)
-      zeitwerk (~> 2.3)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -309,6 +271,7 @@ PLATFORMS
   arm-linux-gnu
   arm-linux-musl
   arm64-darwin
+  ruby
   x86_64-darwin
   x86_64-linux-gnu
   x86_64-linux-musl
@@ -321,7 +284,6 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  karafka
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
