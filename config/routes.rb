@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   end
 
   get "up" => "rails/health#show", as: :rails_health_check
+  resources :alerts, only: [:index]
+
+  root to: "alerts#index"
 end
