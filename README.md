@@ -3,7 +3,7 @@
 ## API
 To post an alert, use:
 
-```bash
+```json
 curl -X POST http://localhost:3000/api/alerts \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: alert_app40ae5068ca80050eb9c3e85645274874cdef360e163819ee9b321c62da18313f" \
@@ -21,3 +21,4 @@ curl -X POST http://localhost:3000/api/alerts \
     }
   }'
 ```
+

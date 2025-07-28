@@ -25,6 +25,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "kicks"
 gem "redis"
 gem "connection_pool"
+
+gem "karafka", "~> 2.5"
