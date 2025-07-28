@@ -27,5 +27,4 @@ end
 
 gem "kicks"
 gem "redis"
-gem "hiredis"
 gem "connection_pool"
