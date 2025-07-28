@@ -25,7 +25,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "kicks", "~> 3.2"
-gem "redis", "~> 5.4"
-gem "hiredis", "~> 0.6.3"
-gem "connection_pool", "~> 2.5"
+gem "kicks"
+gem "redis"
+gem "hiredis"
+gem "connection_pool"
