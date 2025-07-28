@@ -321,7 +321,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  karafka (~> 2.5)
+  karafka
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)

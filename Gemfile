@@ -27,5 +27,5 @@ end
 
 gem "redis"
 gem "connection_pool"
+gem "karafka"
 
-gem "karafka", "~> 2.5"
